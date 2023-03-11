@@ -19,15 +19,15 @@
 
     <div ID="calculator">
 
-    <div ID="display"><span ID="answerText">999</span></div>
+    <div ID="display"><span ID="answerText"></span></div>
 
     <div ID="buttonsStructure">
 
-    <button class="buttons" class="operators "ID="Plus" type="button">+</button>
-    <button class="buttons" class="operators "ID="Minus" type="button">-</button>
-    <button class="buttons" class="operators "ID="Multiply" type="button">*</button>
-    <button class="buttons" class="operators "ID="Divide" type="button">/</button>
-    <button class="buttons" class="specials "ID="Clear All" type="button">AC</button>
+    <button class="buttons" class="operators "ID="Plus" type="button" onclick="whichOp.call(this)">+</button>
+    <button class="buttons" class="operators "ID="Minus" type="button" onclick="whichOp.call(this)">-</button>
+    <button class="buttons" class="operators "ID="Multiply" type="button" onclick="whichOp.call(this)">*</button>
+    <button class="buttons" class="operators "ID="Divide" type="button" onclick="whichOp.call(this)">/</button>
+    <button class="buttons" class="specials "ID="Clear All" type="button" onclick="clearAll()">AC</button>
 
     <button class="buttons digits" id="Zero" type="button" onclick="whichNum.call(this)">0</button>
     <button class="buttons digits" ID="One" type="button" onclick="whichNum.call(this)">1</button>
@@ -40,7 +40,7 @@
     <button class="buttons digits" ID="Eight" type="button" onclick="whichNum.call(this)">8</button>
     <button class="buttons digits" ID="Nine" type="button" onclick="whichNum.call(this)">9</button>
 
-    <button class="buttons" class="specials "ID="Equals" type="button">=</button>
+    <button class="buttons" class="specials "ID="Equals" type="button" onclick="operate (operate, firstArg, secondArg)">=</button>
 
     </div>
     </div>
