@@ -1,30 +1,16 @@
-let operator;
-let firstArg;
-let secondArg;
+let operator = "";
+let firstArg = "";
+let secondArg = "";
 let answer = 0;
 
-const zero = document.getElementById("Zero");
-const one = document.getElementById("One");
-const two = document.getElementById("Two");
-const three = document.getElementById("Three");
-const four = document.getElementById("Four");
-const five = document.getElementById("Five");
-const six = document.getElementById("Six");
-const seven = document.getElementById("Seven");
-const eight = document.getElementById("Eight");
-const nine = document.getElementById("Nine");
-
-const digits = ["zero", "one", "two", "three", "four", "five", "six", "seven",
-"eight", "nine"]
-
-digits.forEach(digit => {
-      digit.addEventListener('click', () => {
-        answer = answer + 1;
-      })
-    });
-
-console.log (answer)
-
+function whichNum () {
+    let value = this.textContent
+    if (operator != "") {
+        secondArg = secondArg + value
+    } else if (operator == "") {
+        firstArg = firstArg + value
+    }
+}
 
 
 
