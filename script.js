@@ -11,6 +11,7 @@ function clearAll () {
     secondArg = ""
     operator = ""
     answer = ""
+    display.innerHTML = "";
 }
 
 
@@ -19,16 +20,15 @@ function whichNum () {
     if (answer != "") {
         firstArg = ""
         secondArg = ""
-        operatort = ""
-        answer = ""
         firstArg = firstArg + value
+        answer = ""
         display.textContent=`${firstArg} ${operator} ${secondArg}`;
         //unsure of the below else if and what it is meant to be doing but it's in my 
         //paper notes that I should make it
     } else if (answer != "" && firstArg != "") {
         firstArg = ""
         secondArg = ""
-        operator = ""
+        // operator = ""
         answer = ""
         firstArg = firstArg + value
         display.textContent=`${firstArg} ${operator} ${secondArg}`;
@@ -43,6 +43,12 @@ function whichNum () {
 
 
 function whichOp () {
+    if (answer != "") {
+        firstArg = ""
+        secondArg = ""
+        firstArg = answer
+        answer = ""
+    }
     let value = this.textContent
     operator = value
 }
@@ -91,4 +97,3 @@ function operate (operate, firstArg, secondArg) {
         divide (firstArg, secondArg)
     }
 }
-
